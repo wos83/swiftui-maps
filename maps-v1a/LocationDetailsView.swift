@@ -53,8 +53,7 @@ struct LocationDetailsView: View {
                     .padding()
             } else {
                 ContentUnavailableView("Sem Imagem do Lugar", systemImage: "eye.slash")
-            }
-            
+            }            
             
             HStack(spacing: 24){
                 Button {

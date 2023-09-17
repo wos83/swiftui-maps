@@ -20,28 +20,21 @@ struct ContentView: View {
     @State private var routeDestination: MKMapItem?
     
     var body: some View {
-        Map(position: $cameraPosition, selection: $mapSelection){
+        Map(position: $cameraPosition, selection: $mapSelection) {
             
             Annotation("Minha Localização", coordinate: .userLocation) {
                 ZStack {
                     Circle()
                         .frame(width: 32, height: 32)
-                        .foregroundColor(
-                            /*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/
-                                                    .opacity(0.25)
-                        )
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/.opacity(0.25))
                     
                     Circle()
                         .frame(width: 20, height: 20)
-                        .foregroundColor(
-                            .white
-                        )
+                        .foregroundColor(.white)
                     
                     Circle()
                         .frame(width: 12, height: 12)
-                        .foregroundColor(
-                            /*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/
-                        )
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
             }
             
@@ -51,19 +44,18 @@ struct ContentView: View {
                     if item == routeDestination {
                         let placemark = item.placemark
                         Marker(placemark.name ?? "", coordinate: placemark.coordinate)
-                    } else {
-                        let placemark = item.placemark
-                        Marker(placemark.name ?? "", coordinate: placemark.coordinate)
                     }
-                }
-                
-                if let route {
-                    MapPolyline(route.polyline)
-                        .stroke(.blue, lineWidth: 6)
+                } else {
+                    let placemark = item.placemark
+                    Marker(placemark.name ?? "", coordinate: placemark.coordinate)
                 }
             }
+            
+            if let route {
+                MapPolyline(route.polyline)
+                    .stroke(.blue, lineWidth: 6)
+            }
         }
-        
             .overlay(alignment: .top) {
                 TextField("Digite o que deseja buscar..", text: $searchText)
                     .font(.subheadline)
@@ -76,41 +68,39 @@ struct ContentView: View {
             }
             
             .onSubmit(of: .text) {
-                Task {
-                    await searchPlaces()
-                }
+                Task { await searchPlaces() }
             }
             
-            .onChange(of: getDirections) {
+            .onChange(of: getDirections, {
                 oldValue, newValue in
                 if newValue {
                     fetchRoute()
                 }
-            }
-        
-        .onChange(of: mapSelection) {
-            oldValue, newValue in
-            showDetails = newValue != nil
-        }
-        
-        .sheet(isPresented: $showDetails, content: {
-            LocationDetailsView(mapSelection: $mapSelection,
-                                show: $showDetails,
-                                getDirections: $getDirections)
+            })
+            
+            .onChange(of: mapSelection, {
+                oldValue, newValue in
+                showDetails = newValue != nil
+            })
+            
+            .sheet(isPresented: $showDetails, content: {
+                LocationDetailsView(mapSelection: $mapSelection,
+                                    show: $showDetails,
+                                    getDirections: $getDirections)
                 .presentationDetents([.height(340)])
                 .presentationBackgroundInteraction(.enabled(upThrough: .height(340)))
                 .presentationCornerRadius(12)
-        })
-        
-        .mapControls {
-            MapCompass()
-            MapPitchToggle()
-            MapUserLocationButton()
+            })
+            
+            .mapControls {
+                MapCompass()
+                MapPitchToggle()
+                MapUserLocationButton()
+            }
         }
     }
-}
 
-extension ContentView{
+extension ContentView {
     func searchPlaces() async {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchText
