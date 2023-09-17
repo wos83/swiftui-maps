@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Volumes/HDD-1TB-V2/Development/WOS/iOS/maps-v1a/WOS Maps.xcodeproj">
    </FileRef>
 </Workspace>

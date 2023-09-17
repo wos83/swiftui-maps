@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "map_1024_v1b.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

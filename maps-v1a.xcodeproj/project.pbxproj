@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00D88C2AB74C39000FCFD8 /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00D88B2AB74C39000FCFD8 /* LocationDetailsView.swift */; };
 		CEFBBEB32AB71DE80028E990 /* maps_v1aApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBBEB22AB71DE80028E990 /* maps_v1aApp.swift */; };
 		CEFBBEB52AB71DE80028E990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBBEB42AB71DE80028E990 /* ContentView.swift */; };
 		CEFBBEB72AB71DEA0028E990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFBBEB62AB71DEA0028E990 /* Assets.xcassets */; };
@@ -14,7 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CEFBBEAF2AB71DE80028E990 /* maps-v1a.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "maps-v1a.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE00D88B2AB74C39000FCFD8 /* LocationDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
+		CEFBBEAF2AB71DE80028E990 /* WOS Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WOS Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFBBEB22AB71DE80028E990 /* maps_v1aApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maps_v1aApp.swift; sourceTree = "<group>"; };
 		CEFBBEB42AB71DE80028E990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEFBBEB62AB71DEA0028E990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		CEFBBEB02AB71DE80028E990 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEFBBEAF2AB71DE80028E990 /* maps-v1a.app */,
+				CEFBBEAF2AB71DE80028E990 /* WOS Maps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +57,7 @@
 				CEFBBEB42AB71DE80028E990 /* ContentView.swift */,
 				CEFBBEB62AB71DEA0028E990 /* Assets.xcassets */,
 				CEFBBEB82AB71DEA0028E990 /* Preview Content */,
+				CE00D88B2AB74C39000FCFD8 /* LocationDetailsView.swift */,
 			);
 			path = "maps-v1a";
 			sourceTree = "<group>";
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEFBBEAE2AB71DE80028E990 /* maps-v1a */ = {
+		CEFBBEAE2AB71DE80028E990 /* WOS Maps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEFBBEBD2AB71DEA0028E990 /* Build configuration list for PBXNativeTarget "maps-v1a" */;
+			buildConfigurationList = CEFBBEBD2AB71DEA0028E990 /* Build configuration list for PBXNativeTarget "WOS Maps" */;
 			buildPhases = (
 				CEFBBEAB2AB71DE80028E990 /* Sources */,
 				CEFBBEAC2AB71DE80028E990 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "maps-v1a";
+			name = "WOS Maps";
 			productName = "maps-v1a";
-			productReference = CEFBBEAF2AB71DE80028E990 /* maps-v1a.app */;
+			productReference = CEFBBEAF2AB71DE80028E990 /* WOS Maps.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEFBBEAA2AB71DE70028E990 /* Build configuration list for PBXProject "maps-v1a" */;
+			buildConfigurationList = CEFBBEAA2AB71DE70028E990 /* Build configuration list for PBXProject "WOS Maps" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEFBBEAE2AB71DE80028E990 /* maps-v1a */,
+				CEFBBEAE2AB71DE80028E990 /* WOS Maps */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFBBEB52AB71DE80028E990 /* ContentView.swift in Sources */,
+				CE00D88C2AB74C39000FCFD8 /* LocationDetailsView.swift in Sources */,
 				CEFBBEB32AB71DE80028E990 /* maps_v1aApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,13 +276,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"maps-v1a/Preview Content\"";
+				DEVELOPMENT_TEAM = VBP8FM97X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WOS Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,13 +308,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"maps-v1a/Preview Content\"";
+				DEVELOPMENT_TEAM = VBP8FM97X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "WOS Maps";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEFBBEAA2AB71DE70028E990 /* Build configuration list for PBXProject "maps-v1a" */ = {
+		CEFBBEAA2AB71DE70028E990 /* Build configuration list for PBXProject "WOS Maps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEFBBEBB2AB71DEA0028E990 /* Debug */,
@@ -332,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEFBBEBD2AB71DEA0028E990 /* Build configuration list for PBXNativeTarget "maps-v1a" */ = {
+		CEFBBEBD2AB71DEA0028E990 /* Build configuration list for PBXNativeTarget "WOS Maps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEFBBEBE2AB71DEA0028E990 /* Debug */,
