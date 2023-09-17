@@ -12,6 +12,7 @@ struct maps_v1aApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light) 
         }
     }
 }
